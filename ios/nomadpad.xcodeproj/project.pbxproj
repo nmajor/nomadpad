@@ -39,6 +39,7 @@
 		81427CE27B1328DFC50F844C /* libPods-nomadpad-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F7A95557F1DC865156670F /* libPods-nomadpad-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		94906324FD2FA5CFC5E3EEED /* libPods-nomadpadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B645BAF4D059E05CF67B57 /* libPods-nomadpadTests.a */; };
+		CA434DA41F118A1B00B95421 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA434DA31F118A1B00B95421 /* GoogleService-Info.plist */; };
 		E22533AFE2D1B67E8CD5B8CB /* libPods-nomadpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142D5025872122B358FCBACD /* libPods-nomadpad.a */; };
 /* End PBXBuildFile section */
 
@@ -282,6 +283,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8DD5077B1C0481E5C6F21017 /* Pods-nomadpad-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOSTests/Pods-nomadpad-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C58DE5FE6421D44319599AE4 /* Pods-nomadpad-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOS/Pods-nomadpad-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CA434DA31F118A1B00B95421 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "nomadpad/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D28744706A34B6DE9E7B7A05 /* Pods-nomadpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpadTests/Pods-nomadpadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2C40F141D59F694DE02974 /* Pods-nomadpad-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOS/Pods-nomadpad-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F287658FF0EE31882B4BFF64 /* Pods-nomadpadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpadTests/Pods-nomadpadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -425,9 +427,9 @@
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -454,8 +456,8 @@
 		34414F6276A7A4FE3DF6A54A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				142D5025872122B358FCBACD /* libPods-nomadpad.a */,
 				09F7A95557F1DC865156670F /* libPods-nomadpad-tvOS.a */,
+				142D5025872122B358FCBACD /* libPods-nomadpad.a */,
 				03CD182F2C6DC4E840E9D3EC /* libPods-nomadpad-tvOSTests.a */,
 				62B645BAF4D059E05CF67B57 /* libPods-nomadpadTests.a */,
 			);
@@ -510,6 +512,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CA434DA31F118A1B00B95421 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* nomadpad */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* nomadpadTests */,
@@ -931,6 +934,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				CA434DA41F118A1B00B95421 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
