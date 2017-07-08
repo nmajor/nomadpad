@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import { View, StatusBar } from 'react-native';
 import { Scene, Router } from 'react-native-router-flux';
 import Welcome from './components/Welcome';
+import Search from './components/Search';
+import Add from './components/Add';
+import Profile from './components/Profile';
+import Login from './components/Login';
 import { primaryColor, primaryColorDark } from './styleVars';
+import appConfig from '../app.json';
 
 class RouterComponent extends Component {
   shouldComponentUpdate() {
@@ -18,6 +23,8 @@ class RouterComponent extends Component {
       navBarTitleStyle,
     } = styles;
 
+    const title = appConfig.displayName;
+
     return (
       <View style={{ flex: 1 }}>
         <StatusBar
@@ -30,6 +37,10 @@ class RouterComponent extends Component {
           leftButtonIconStyle={{ tintColor: '#FFF' }}
         >
           <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={Welcome} hideNavBar initial={this.isInitial('welcome')} />
+          <Scene key="login" sceneStyle={{ paddingTop: 0 }} component={Login} hideNavBar initial={this.isInitial('login')} />
+          <Scene key="search" component={Search} title={title} initial={this.isInitial('home')} />
+          <Scene key="add" component={Add} title={title} />
+          <Scene key="profile" component={Profile} title={title} />
         </Router>
       </View>
     );
@@ -51,10 +62,11 @@ const styles = {
 };
 
 const mapStateToProps = ({ pagesViewed }) => {
-  let initialScene = 'home';
+  let initialScene = 'search';
+  console.log(pagesViewed);
 
   if (!pagesViewed.welcome) {
-    initialScene = 'welcomed';
+    initialScene = 'welcome';
   }
 
   return { initialScene };

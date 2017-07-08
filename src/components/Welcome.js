@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Actions, ActionConst } from 'react-native-router-flux';
 import { primaryColor } from '../styleVars';
-import { setWelcomed } from '../actions';
+import { setPageViewed } from '../actions';
 
 const saladImage = require('../assets/map-desk.jpg');
 
 class Welcome extends Component {
   onButtonPress() {
-    this.props.setPageViewed('Welcome');
+    this.props.setPageViewed('welcome', true);
+
+    const needsLogin = true;
+
+    if (needsLogin) {
+      Actions.login({ type: ActionConst.RESET });
+    } else {
+      Actions.search({ type: ActionConst.RESET });
+    }
   }
   render() {
     const {
@@ -19,17 +28,20 @@ class Welcome extends Component {
       touchableStyle,
       buttonContainerStyle,
       buttonTextStyle,
+      overlayStyle,
     } = styles;
 
     return (
       <Image style={imageStyle} source={saladImage}>
-        <Text style={headerTextStyle}>Welcome!</Text>
-        <Text style={bodyStyle}>Get insider info from other digital nomads about your next destination!</Text>
-        <View style={buttonContainerStyle}>
-          <View style={buttonStyle}>
-            <TouchableOpacity style={touchableStyle} onPress={this.onButtonPress.bind(this)}>
-              <Text style={buttonTextStyle}>Get Started</Text>
-            </TouchableOpacity>
+        <View style={overlayStyle}>
+          <Text style={headerTextStyle}>Welcome!</Text>
+          <Text style={bodyStyle}>Get insider info from other digital nomads about your next destination!</Text>
+          <View style={buttonContainerStyle}>
+            <View style={buttonStyle}>
+              <TouchableOpacity style={touchableStyle} onPress={this.onButtonPress.bind(this)}>
+                <Text style={buttonTextStyle}>Get Started</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Image>
@@ -40,8 +52,6 @@ class Welcome extends Component {
 const styles = {
   imageStyle: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     height: null,
     width: null,
   },
@@ -93,12 +103,16 @@ const styles = {
     fontWeight: '300',
     fontSize: 18,
   },
+  overlayStyle: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,.6)',
+  },
 };
 
 const mapStateToProps = (state) => {
-  return {
-    needsGoals: state.goals.length === 0,
-  };
+  return {};
 };
 
-export default connect(mapStateToProps, { setWelcomed })(Welcome);
+export default connect(mapStateToProps, { setPageViewed })(Welcome);

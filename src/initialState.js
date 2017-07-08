@@ -1,5 +1,5 @@
 export default {
-  pageViewed: {
+  pagesViewed: {
     welcome: 0,
   },
 };
