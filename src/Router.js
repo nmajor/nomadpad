@@ -2,15 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, StatusBar } from 'react-native';
 import { Scene, Router } from 'react-native-router-flux';
-// import Loading from './components/Loading';
-// import Home from './components/Home';
-// import Entries from './components/Entries';
-// import Settings from './components/Settings';
-// // import AdminSettings from './components/AdminSettings';
-// import Stats from './components/Stats';
-// import Welcome from './components/Welcome';
-// import SignIn from './components/SignIn';
-// import EditGoals from './components/EditGoals';
+import Welcome from './components/Welcome';
 import { primaryColor, primaryColorDark } from './styleVars';
 
 class RouterComponent extends Component {
@@ -38,13 +30,6 @@ class RouterComponent extends Component {
           leftButtonIconStyle={{ tintColor: '#FFF' }}
         >
           <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={Welcome} hideNavBar initial={this.isInitial('welcome')} />
-          <Scene key="home" component={Home} title="Meal Meter" initial={this.isInitial('home')} />
-          <Scene key="entries" component={Entries} title="Meal Meter" />
-          <Scene key="settings" component={Settings} title="Meal Meter" />
-          <Scene key="stats" component={Stats} title="Meal Meter" />
-          <Scene key="signIn" component={SignIn} title="Meal Meter" />
-          <Scene key="newGoals" component={EditGoals} title="Goals" initial={this.isInitial('newGoals')} />
-          <Scene key="editGoals" component={EditGoals} title="Edit Goals" />
         </Router>
       </View>
     );
@@ -65,13 +50,11 @@ const styles = {
   },
 };
 
-const mapStateToProps = ({ welcomed, goals }) => {
+const mapStateToProps = ({ pagesViewed }) => {
   let initialScene = 'home';
 
-  if (!welcomed) {
+  if (!pagesViewed.welcome) {
     initialScene = 'welcomed';
-  } else if (goals.length === 0) {
-    initialScene = 'newGoals';
   }
 
   return { initialScene };

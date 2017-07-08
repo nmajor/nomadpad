@@ -2,9 +2,9 @@ import {
   SET_PAGE_VIEWED,
 } from './types';
 
-export const setWelcomed = (val) => {
+export const setPageViewed = (page, value) => {
   return {
     type: SET_PAGE_VIEWED,
-    payload: val,
+    payload: { page, value },
   };
 };

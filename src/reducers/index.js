@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import WelcomedReducer from './WelcomedReducer';
+import PagesViewedReducer from './PagesViewedReducer';
 
 export default combineReducers({
-  welcomed: WelcomedReducer,
+  welcomed: PagesViewedReducer,
 });
