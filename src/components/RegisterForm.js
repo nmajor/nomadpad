@@ -9,7 +9,7 @@ import {
 } from 'react-native-clean-form';
 import { Input } from 'react-native-clean-form/redux-form-immutable';
 
-// import { View, Text } from 'react-native'
+import { View } from 'react-native'
 
 // const onSubmit = (values, dispatch) => {
 //   return new Promise((resolve) => {
@@ -29,15 +29,16 @@ class FormView extends Component {
     const { submitting } = this.props;
 
     return (
-      <Form>
-        <FieldsContainer>
-          <Fieldset label="Register">
-            <Input name="first_name" label="First name" placeholder="John" />
-            <Input name="last_name" label="Last name" placeholder="Doe" />
-            <Input name="email" label="Email" placeholder="something@domain.com" />
-            <Input name="telephone" label="Phone" placeholder="+45 88 88 88 88" />
+      <Form style={{ flex: 1, justifyContent: 'center' }}>
+        <View style={{ flex: 1 }} />
+        <FieldsContainer style={{ width: '100%' }}>
+          <Fieldset label="Register" style={{ width: '100%' }}>
+            <Input name="email" label="Email" placeholder="john@example.com" />
+            <Input name="password" label="Password" />
+            <Input name="password_confirmation" label="Confirm Password" />
           </Fieldset>
         </FieldsContainer>
+        <View style={{ flex: 1 }} />
         <ActionsContainer>
           <Button icon="md-checkmark" iconPlacement="right" onPress={this.onSubmit} submitting={submitting}>Save</Button>
         </ActionsContainer>

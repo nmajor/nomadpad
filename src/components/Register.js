@@ -31,12 +31,16 @@ class Register extends Component {
       // buttonContainerStyle,
       // buttonTextStyle,
       overlayStyle,
+      formWrapperStyle,
     } = styles;
 
+    // return <RegisterForm handleSubmit={this.handleSubmit} />
     return (
       <Image style={imageStyle} source={saladImage}>
         <View style={overlayStyle}>
-          <RegisterForm handleSubmit={this.handleSubmit} />
+          <View style={formWrapperStyle}>
+            <RegisterForm handleSubmit={this.handleSubmit} />
+          </View>
         </View>
       </Image>
     );
@@ -99,9 +103,13 @@ const styles = {
   },
   overlayStyle: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,.6)',
+    height: null,
+    width: null,
+  },
+  formWrapperStyle: {
+    flex: 1,
+    justifyContent: 'center',
   },
 };
 

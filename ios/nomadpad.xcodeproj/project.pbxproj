@@ -22,6 +22,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		1E1F6CCF036045DFAD3C3931 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB6130B93E4FE1911A9AE2 /* MaterialIcons.ttf */; };
+		2BE9A146720B4B2A84FF0CF9 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C458AC6A0414DDE818778A7 /* MaterialCommunityIcons.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -34,13 +36,32 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* nomadpadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nomadpadTests.m */; };
+		3D377C9548F34DF59009AF8B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AAAF1EA8717488DA965FB67 /* Foundation.ttf */; };
+		4274F3E631EB4061B30D7D88 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0C48294B224F56B35EF1B8 /* Octicons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		68AA44373BF9C9527D8026E1 /* libPods-nomadpad-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CD182F2C6DC4E840E9D3EC /* libPods-nomadpad-tvOSTests.a */; };
+		6C90AD67E01F4768BA9F864A /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0CF270C40946ACA3DE7F27 /* libRNVectorIcons.a */; };
+		76A9F645D22D416E884C8EE8 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAA47EB7A6A54A7B80C330A2 /* Entypo.ttf */; };
 		81427CE27B1328DFC50F844C /* libPods-nomadpad-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F7A95557F1DC865156670F /* libPods-nomadpad-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8634368316754A5DB8543E42 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD2FF3A9BB5649E7B92AE0B3 /* Ionicons.ttf */; };
+		887AD9E91B464E3C94C4716A /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53789B72AF8540C7905BC86F /* FontAwesome.ttf */; };
 		94906324FD2FA5CFC5E3EEED /* libPods-nomadpadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B645BAF4D059E05CF67B57 /* libPods-nomadpadTests.a */; };
+		AB5C6C4595034B02B0D989E3 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F6992DE862480482344FEC /* EvilIcons.ttf */; };
 		CA434DA41F118A1B00B95421 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA434DA31F118A1B00B95421 /* GoogleService-Info.plist */; };
+		CA9E00A91F11AA7500DEFEA9 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E009F1F11AA7500DEFEA9 /* Entypo.ttf */; };
+		CA9E00AA1F11AA7500DEFEA9 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A01F11AA7500DEFEA9 /* EvilIcons.ttf */; };
+		CA9E00AB1F11AA7500DEFEA9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A11F11AA7500DEFEA9 /* FontAwesome.ttf */; };
+		CA9E00AC1F11AA7500DEFEA9 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A21F11AA7500DEFEA9 /* Foundation.ttf */; };
+		CA9E00AD1F11AA7500DEFEA9 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A31F11AA7500DEFEA9 /* Ionicons.ttf */; };
+		CA9E00AE1F11AA7500DEFEA9 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A41F11AA7500DEFEA9 /* MaterialCommunityIcons.ttf */; };
+		CA9E00AF1F11AA7500DEFEA9 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A51F11AA7500DEFEA9 /* MaterialIcons.ttf */; };
+		CA9E00B01F11AA7500DEFEA9 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A61F11AA7500DEFEA9 /* Octicons.ttf */; };
+		CA9E00B11F11AA7500DEFEA9 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A71F11AA7500DEFEA9 /* SimpleLineIcons.ttf */; };
+		CA9E00B21F11AA7500DEFEA9 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E00A81F11AA7500DEFEA9 /* Zocial.ttf */; };
+		DFD94B9A2FF442E288BF14B4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E501FC5772AE4C37A3068E00 /* SimpleLineIcons.ttf */; };
 		E22533AFE2D1B67E8CD5B8CB /* libPods-nomadpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142D5025872122B358FCBACD /* libPods-nomadpad.a */; };
+		F338A5F28ED644218B328A6D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCCC4EA9D4FC4415AEE38A56 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +268,13 @@
 			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
 			remoteInfo = "double-conversion";
 		};
+		CA9E009C1F11AA0800DEFEA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94685B4299D242979265A1D9 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -261,6 +289,7 @@
 		00E356F21AD99517003FC87E /* nomadpadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nomadpadTests.m; sourceTree = "<group>"; };
 		03CD182F2C6DC4E840E9D3EC /* libPods-nomadpad-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nomadpad-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7A95557F1DC865156670F /* libPods-nomadpad-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nomadpad-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C458AC6A0414DDE818778A7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* nomadpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nomadpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,16 +304,37 @@
 		23095F5228C99AE260E691B3 /* Pods-nomadpad-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOSTests/Pods-nomadpad-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* nomadpad-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nomadpad-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* nomadpad-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nomadpad-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0CF270C40946ACA3DE7F27 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		4BFB6130B93E4FE1911A9AE2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		53789B72AF8540C7905BC86F /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		5906E31CD9C47D2431EB61B0 /* Pods-nomadpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad/Pods-nomadpad.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1E1691B6B2317CB429181C /* Pods-nomadpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad/Pods-nomadpad.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		62B645BAF4D059E05CF67B57 /* libPods-nomadpadTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nomadpadTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F6992DE862480482344FEC /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		6AAAF1EA8717488DA965FB67 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7B0C48294B224F56B35EF1B8 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8DD5077B1C0481E5C6F21017 /* Pods-nomadpad-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOSTests/Pods-nomadpad-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94685B4299D242979265A1D9 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		C58DE5FE6421D44319599AE4 /* Pods-nomadpad-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOS/Pods-nomadpad-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CA434DA31F118A1B00B95421 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "nomadpad/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA9E009F1F11AA7500DEFEA9 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		CA9E00A01F11AA7500DEFEA9 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		CA9E00A11F11AA7500DEFEA9 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		CA9E00A21F11AA7500DEFEA9 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		CA9E00A31F11AA7500DEFEA9 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		CA9E00A41F11AA7500DEFEA9 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		CA9E00A51F11AA7500DEFEA9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		CA9E00A61F11AA7500DEFEA9 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		CA9E00A71F11AA7500DEFEA9 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		CA9E00A81F11AA7500DEFEA9 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		D28744706A34B6DE9E7B7A05 /* Pods-nomadpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpadTests/Pods-nomadpadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAA47EB7A6A54A7B80C330A2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		DCCC4EA9D4FC4415AEE38A56 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		DD2FF3A9BB5649E7B92AE0B3 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		E501FC5772AE4C37A3068E00 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		EC2C40F141D59F694DE02974 /* Pods-nomadpad-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpad-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpad-tvOS/Pods-nomadpad-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F287658FF0EE31882B4BFF64 /* Pods-nomadpadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomadpadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomadpadTests/Pods-nomadpadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -315,6 +365,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				E22533AFE2D1B67E8CD5B8CB /* libPods-nomadpad.a in Frameworks */,
+				6C90AD67E01F4768BA9F864A /* libRNVectorIcons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +455,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		10213D3F501C406884CC5B11 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAA47EB7A6A54A7B80C330A2 /* Entypo.ttf */,
+				67F6992DE862480482344FEC /* EvilIcons.ttf */,
+				53789B72AF8540C7905BC86F /* FontAwesome.ttf */,
+				6AAAF1EA8717488DA965FB67 /* Foundation.ttf */,
+				DD2FF3A9BB5649E7B92AE0B3 /* Ionicons.ttf */,
+				0C458AC6A0414DDE818778A7 /* MaterialCommunityIcons.ttf */,
+				4BFB6130B93E4FE1911A9AE2 /* MaterialIcons.ttf */,
+				7B0C48294B224F56B35EF1B8 /* Octicons.ttf */,
+				E501FC5772AE4C37A3068E00 /* SimpleLineIcons.ttf */,
+				DCCC4EA9D4FC4415AEE38A56 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +493,7 @@
 		13B07FAE1A68108700A75B9A /* nomadpad */ = {
 			isa = PBXGroup;
 			children = (
+				CA9E009E1F11AA7500DEFEA9 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -496,6 +565,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				94685B4299D242979265A1D9 /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -519,6 +589,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				A5711DE4D2C5A8D2143FA667 /* Pods */,
 				34414F6276A7A4FE3DF6A54A /* Frameworks */,
+				10213D3F501C406884CC5B11 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -548,6 +619,31 @@
 				F287658FF0EE31882B4BFF64 /* Pods-nomadpadTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA9E007E1F11AA0800DEFEA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA9E009D1F11AA0800DEFEA9 /* libRNVectorIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA9E009E1F11AA7500DEFEA9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA9E009F1F11AA7500DEFEA9 /* Entypo.ttf */,
+				CA9E00A01F11AA7500DEFEA9 /* EvilIcons.ttf */,
+				CA9E00A11F11AA7500DEFEA9 /* FontAwesome.ttf */,
+				CA9E00A21F11AA7500DEFEA9 /* Foundation.ttf */,
+				CA9E00A31F11AA7500DEFEA9 /* Ionicons.ttf */,
+				CA9E00A41F11AA7500DEFEA9 /* MaterialCommunityIcons.ttf */,
+				CA9E00A51F11AA7500DEFEA9 /* MaterialIcons.ttf */,
+				CA9E00A61F11AA7500DEFEA9 /* Octicons.ttf */,
+				CA9E00A71F11AA7500DEFEA9 /* SimpleLineIcons.ttf */,
+				CA9E00A81F11AA7500DEFEA9 /* Zocial.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,7 +739,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -716,6 +812,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = CA9E007E1F11AA0800DEFEA9 /* Products */;
+					ProjectRef = 94685B4299D242979265A1D9 /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -918,6 +1018,13 @@
 			remoteRef = CA434D961F1186F900B95421 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CA9E009D1F11AA0800DEFEA9 /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = CA9E009C1F11AA0800DEFEA9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -933,8 +1040,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CA9E00A91F11AA7500DEFEA9 /* Entypo.ttf in Resources */,
+				CA9E00AD1F11AA7500DEFEA9 /* Ionicons.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				CA9E00AB1F11AA7500DEFEA9 /* FontAwesome.ttf in Resources */,
 				CA434DA41F118A1B00B95421 /* GoogleService-Info.plist in Resources */,
+				76A9F645D22D416E884C8EE8 /* Entypo.ttf in Resources */,
+				AB5C6C4595034B02B0D989E3 /* EvilIcons.ttf in Resources */,
+				887AD9E91B464E3C94C4716A /* FontAwesome.ttf in Resources */,
+				3D377C9548F34DF59009AF8B /* Foundation.ttf in Resources */,
+				CA9E00B01F11AA7500DEFEA9 /* Octicons.ttf in Resources */,
+				8634368316754A5DB8543E42 /* Ionicons.ttf in Resources */,
+				2BE9A146720B4B2A84FF0CF9 /* MaterialCommunityIcons.ttf in Resources */,
+				CA9E00AF1F11AA7500DEFEA9 /* MaterialIcons.ttf in Resources */,
+				1E1F6CCF036045DFAD3C3931 /* MaterialIcons.ttf in Resources */,
+				CA9E00B11F11AA7500DEFEA9 /* SimpleLineIcons.ttf in Resources */,
+				4274F3E631EB4061B30D7D88 /* Octicons.ttf in Resources */,
+				DFD94B9A2FF442E288BF14B4 /* SimpleLineIcons.ttf in Resources */,
+				CA9E00AE1F11AA7500DEFEA9 /* MaterialCommunityIcons.ttf in Resources */,
+				CA9E00AC1F11AA7500DEFEA9 /* Foundation.ttf in Resources */,
+				CA9E00AA1F11AA7500DEFEA9 /* EvilIcons.ttf in Resources */,
+				CA9E00B21F11AA7500DEFEA9 /* Zocial.ttf in Resources */,
+				F338A5F28ED644218B328A6D /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,9 +1365,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = nomadpadTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1256,9 +1391,17 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = nomadpadTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1275,6 +1418,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = nomadpad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1293,6 +1440,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = nomadpad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1318,8 +1469,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = "nomadpad-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1345,8 +1504,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = "nomadpad-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1373,6 +1540,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "nomadpad-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.nomadpad-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1395,6 +1566,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "nomadpad-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.nomadpad-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
