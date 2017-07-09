@@ -9,14 +9,14 @@ import { Input, Button, Spinner, Card, CardSection } from './common';
 const saladImage = require('../assets/map-desk.jpg');
 
 class Login extends Component {
+  componentWillUnmount() {
+    this.props.clearLoginForm();
+  }
   onEmailChange(text) {
     this.props.setLoginFormValue('email', text);
   }
   onPasswordChange(text) {
     this.props.setLoginFormValue('password', text);
-  }
-  ComponentDidUnmount() {
-    this.props.clearLoginForm();
   }
   handleSubmitPress() {
     const { email, password } = this.props.form;

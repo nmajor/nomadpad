@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View, Text, TouchableOpacity, CameraRoll } from 'react-native';
 import { Input, Button, Spinner, Card, CardSection } from './common';
-import { setProfileFormValue } from '../actions';
+import { setProfileFormValue, updateUser, clearProfileForm } from '../actions';
 import PageContainer from './PageContainer';
 
 class EditProfile extends Component {
+  componentWillUnmount() {
+    this.props.clearProfileForm();
+  }
   onDisplayNameChange(text) {
     this.props.setProfileFormValue('displayName', text);
-  }
-  ComponentDidUnmount() {
-    this.props.clearLoginForm();
   }
   handleSubmitPress() {
     const { displayName, avatar } = this.props.form;
@@ -22,9 +22,11 @@ class EditProfile extends Component {
       assetType: 'Photos',
     })
     .then((data) => {
-      const image = data[0].node.image;
+      const image = data.edges[0].node.image;
+      console.log(data);
       this.props.setProfileFormValue('avatar', image);
-    });
+    })
+    .catch((err) => { console.log('CameraRoll error', err); });
   }
   renderButton() {
     if (this.props.loading) {
@@ -64,10 +66,11 @@ class EditProfile extends Component {
   }
 }
 
-const mapStateToProps = (profileForm) => {
+const mapStateToProps = ({ profileForm }) => {
+  console.log('blah profileForm', profileForm);
   return {
     form: profileForm,
   };
 };
 
-export default connect(mapStateToProps, { setProfileFormValue })(EditProfile);
+export default connect(mapStateToProps, { setProfileFormValue, updateUser, clearProfileForm })(EditProfile);

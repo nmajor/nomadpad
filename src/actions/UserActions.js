@@ -19,19 +19,34 @@ export const setUserAttribute = (attr, val) => {
   };
 };
 
-export const updateUser = (user) => {
-  const attributes = {
-    displayName: user.displayName,
-    avatar: user.avatar,
-  };
+export const updateUser = (data) => {
+  const { currentUser } = firebase.auth();
+  console.log(`/users/${data.avatar.filename}`);
+
+  console.log('blah test 1', firebase.storage().ref(`users/${currentUser.uid}/avatar/${data.avatar.filename}`));
 
   return (dispatch) => {
-    firebase.auth().currentUser
-    .updateProfile(attributes)
-    .then((updatedUser) => {
-      dispatch(setUser(updatedUser));
+    console.log('blah test 2', firebase.storage().ref(`users/${currentUser.uid}/avatar/${data.avatar.filename}`));
+
+    firebase.storage()
+    .ref(`users/${currentUser.uid}/avatar/${data.avatar.filename}`)
+    .put(data.avatar.uri)
+    .then(uploadedFile => {
+      const attributes = {
+        displayName: data.displayName,
+        avatar: uploadedFile,
+      };
+      console.log('blah 1');
+
+      firebase.auth().currentUser
+      .updateProfile(attributes)
+      .then((updatedUser) => {
+        console.log('blah 2');
+        dispatch(setUser(updatedUser));
+      })
+      .catch((err) => { console.log('An error happened when updating user', err); });
     })
-    .catch();
+    .catch((err) => { console.log('An error happened when uploading avatar', err); });
   };
 };
 
