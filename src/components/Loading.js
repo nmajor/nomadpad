@@ -23,7 +23,7 @@ export default (
     <StatusBar
       barStyle="dark-content"
     />
-    <Text style={styles.textStyle}>Meal Meter</Text>
+    <Text style={styles.textStyle}>Balooga</Text>
     <ActivityIndicator
       style={[styles.centering, { transform: [{ scale: 1.5 }] }]}
       color={primaryColor}

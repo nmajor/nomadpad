@@ -39,7 +39,6 @@ class Register extends Component {
       <Image style={imageStyle} source={saladImage}>
         <View style={overlayStyle}>
           <View style={formWrapperStyle}>
-            <RegisterForm handleSubmit={this.handleSubmit} />
           </View>
         </View>
       </Image>

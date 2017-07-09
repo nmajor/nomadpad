@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
-import { Actions, ActionConst } from 'react-native-router-flux';
+import { View, Image } from 'react-native';
+// import { Actions, ActionConst } from 'react-native-router-flux';
 import { primaryColor } from '../styleVars';
-import { loginUserFacebook } from '../actions';
+import { loginUserFacebook, setLoginFormValue } from '../actions';
+import { Input, Button, Spinner, Card, CardSection } from './common';
 
 const saladImage = require('../assets/map-desk.jpg');
 
 class Login extends Component {
-  onButtonPress() {
-    this.props.loginUserFacebook();
-    console.log('blah button pressed on login pave');
+  onEmailChange(text) {
+    this.props.setLoginFormValue('email', text);
   }
-  handleRegisterPress() {
-    Actions.register({ type: ActionConst.RESET });
+  onPasswordChange(text) {
+    this.props.setLoginFormValue('password', text);
+  }
+  handleSubmitPress() {
+    const { email, password } = this.props.form;
+    this.props.loginUser(email, password);
+  }
+  renderButton() {
+    if (this.props.loading) {
+      return <Spinner size="large" />;
+    }
+
+    return (
+      <Button onPress={this.handleSubmitPress.bind(this)}>
+        Login
+      </Button>
+    );
   }
   render() {
     const {
@@ -25,14 +40,38 @@ class Login extends Component {
       // buttonContainerStyle,
       // buttonTextStyle,
       overlayStyle,
+      formWrapperStyle,
     } = styles;
+
+    const { form } = this.props;
 
     return (
       <Image style={imageStyle} source={saladImage}>
         <View style={overlayStyle}>
-          <TouchableOpacity onPress={this.handleRegisterPress.bind(this)}>
-            <Text>Register</Text>
-          </TouchableOpacity>
+          <View style={formWrapperStyle}>
+            <Card>
+              <CardSection border>
+                <Input
+                  label="Email"
+                  placeholder="password"
+                  value={form.email}
+                  onChangeText={this.onEmailChange.bind(this)}
+                />
+              </CardSection>
+              <CardSection border>
+                <Input
+                  secureTextEntry
+                  label="Password"
+                  placeholder="password"
+                  value={form.password}
+                  onChangeText={this.onPasswordChange.bind(this)}
+                />
+              </CardSection>
+              <CardSection>
+                {this.renderButton()}
+              </CardSection>
+            </Card>
+          </View>
         </View>
       </Image>
     );
@@ -95,14 +134,18 @@ const styles = {
   },
   overlayStyle: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,.6)',
+  },
+  formWrapperStyle: {
+    flex: 1,
+    justifyContent: 'center',
   },
 };
 
-const mapStateToProps = (state) => {
-  return {};
+const mapStateToProps = ({ loginForm }) => {
+  return {
+    form: loginForm,
+  };
 };
 
-export default connect(mapStateToProps, { loginUserFacebook })(Login);
+export default connect(mapStateToProps, { loginUserFacebook, setLoginFormValue })(Login);

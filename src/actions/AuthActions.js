@@ -2,25 +2,49 @@
 import firebase from 'react-native-firebase';
 
 import { setUser } from './UserActions';
+import { setLoginFormValue } from './LoginFormActions';
 
-export const loginUser = () => {
+export const loginUser = (email, password) => {
+  // cb = cb || function(){}; // eslint-disable-line
+
   return (dispatch) => {
-    firebase.auth().signInWithEmailAndPassword('foo@bar.com', '123456')
+    firebase.auth().signInWithEmailAndPassword(email, password)
     .then((user) => {
-      console.log('User successfully logged in', user);
+      console.log('user logged in', user);
       dispatch(setUser(user));
     })
     .catch((err) => {
-      console.error('User signin error', err);
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((user) => {
+        console.log('user created', user);
+        dispatch(setUser(user));
+      })
+      .catch((error) => {
+        dispatch(setLoginFormValue('errors', 'An error happened.'));
+        console.error('register error', error);
+      });
+
+      console.error('login error', err);
     });
   };
 };
+
+// firebase.auth().signInWithEmailAndPassword(email, password)
+// .then(user => loginUserSuccess(dispatch, user))
+// .catch((error) => {
+//   console.log(error);
+//
+//   firebase.auth().createUserWithEmailAndPassword(email, password)
+//     .then(user => loginUserSuccess(dispatch, user))
+//     .catch(() => loginUserFail(dispatch));
+// });
+
 
 export const registerUser = () => {
   return (dispatch) => {
     firebase.auth().createUserWithEmailAndPassword('foo@bar.com', '123456')
     .then((user) => {
-      console.log('user created', user)
+      console.log('user created', user);
       dispatch(setUser(user));
     })
     .catch((err) => {

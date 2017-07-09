@@ -1,14 +1,33 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
-class Home extends Component {
-  render() {
-    return (
-      <View>
-        <Text>Hello</Text>
-      </View>
-    );
+const CardSection = (props) => {
+  let { containerStyle } = styles;
+  const { border } = props;
+
+  if (border) {
+    containerStyle = {
+      ...containerStyle,
+      borderBottomWidth: 1,
+      borderColor: '#ddd',
+    };
   }
-}
 
-export default Home;
+  return (
+    <View style={[containerStyle, props.style]}>
+      {props.children}
+    </View>
+  );
+};
+
+const styles = {
+  containerStyle: {
+    padding: 5,
+    backgroundColor: '#fff',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    position: 'relative',
+  },
+};
+
+export { CardSection };
