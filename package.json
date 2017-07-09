@@ -7,14 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "immutable": "^3.8.1",
     "lodash": "^4.17.4",
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.1",
-    "react-native-fbsdk": "^0.6.1",
+    "react-native-clean-form": "^0.4.2",
     "react-native-firebase": "^2.0.2",
     "react-native-router-flux": "^3.41.0",
+    "react-native-vector-icons": "^4.2.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
+    "redux-form": "^6.8.0",
     "redux-persist": "^4.8.0",
     "redux-thunk": "^2.2.0"
   },

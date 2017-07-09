@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
-import { Actions, ActionConst } from 'react-native-router-flux';
+import { View, Image } from 'react-native';
+// import { Text, View, TouchableOpacity, Image } from 'react-native';
+// import { Actions, ActionConst } from 'react-native-router-flux';
+
+import RegisterForm from './RegisterForm';
+
 import { primaryColor } from '../styleVars';
-import { loginUserFacebook } from '../actions';
+import { registerUser } from '../actions';
 
 const saladImage = require('../assets/map-desk.jpg');
 
-class Login extends Component {
-  onButtonPress() {
-    this.props.loginUserFacebook();
-    console.log('blah button pressed on login pave');
+class Register extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleRegisterPress() {
-    Actions.register({ type: ActionConst.RESET });
+  handleSubmit() {
+    this.props.registerUser();
+    console.log('blah button pressed on login pave');
   }
   render() {
     const {
@@ -30,9 +36,7 @@ class Login extends Component {
     return (
       <Image style={imageStyle} source={saladImage}>
         <View style={overlayStyle}>
-          <TouchableOpacity onPress={this.handleRegisterPress.bind(this)}>
-            <Text>Register</Text>
-          </TouchableOpacity>
+          <RegisterForm handleSubmit={this.handleSubmit} />
         </View>
       </Image>
     );
@@ -105,4 +109,4 @@ const mapStateToProps = (state) => {
   return {};
 };
 
-export default connect(mapStateToProps, { loginUserFacebook })(Login);
+export default connect(mapStateToProps, { registerUser })(Register);

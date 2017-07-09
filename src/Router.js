@@ -6,6 +6,7 @@ import Welcome from './components/Welcome';
 import Search from './components/Search';
 import Add from './components/Add';
 import Profile from './components/Profile';
+import Register from './components/Register';
 import Login from './components/Login';
 import { primaryColor, primaryColorDark } from './styleVars';
 import appConfig from '../app.json';
@@ -36,7 +37,8 @@ class RouterComponent extends Component {
           titleStyle={navBarTitleStyle}
           leftButtonIconStyle={{ tintColor: '#FFF' }}
         >
-          <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={Welcome} hideNavBar initial={this.isInitial('welcome')} />
+          <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={Register} hideNavBar initial={this.isInitial('welcome')} />
+          <Scene key="register" sceneStyle={{ paddingTop: 0 }} component={Register} hideNavBar initial={this.isInitial('register')} />
           <Scene key="login" sceneStyle={{ paddingTop: 0 }} component={Login} hideNavBar initial={this.isInitial('login')} />
           <Scene key="search" component={Search} title={title} initial={this.isInitial('home')} />
           <Scene key="add" component={Add} title={title} />
