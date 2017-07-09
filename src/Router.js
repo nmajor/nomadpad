@@ -27,20 +27,20 @@ class RouterComponent extends Component {
     } = styles;
 
     const title = appConfig.displayName;
-    return (<View style={{ flex: 1 }}>
-      <StatusBar
-        barStyle="light-content"
-      />
-      <Router
-        sceneStyle={{ paddingTop: 64 }}
-        navigationBarStyle={navBarStyle}
-        titleStyle={navBarTitleStyle}
-        leftButtonIconStyle={{ tintColor: '#FFF' }}
-      >
-        <Scene key="search" component={Search} title={title} initial={this.isInitial('search')} />
-        <Scene key="add" component={Add} title={title} />
-      </Router>
-    </View>);
+    // return (<View style={{ flex: 1 }}>
+    //   <StatusBar
+    //     barStyle="light-content"
+    //   />
+    //   <Router
+    //     sceneStyle={{ paddingTop: 64 }}
+    //     navigationBarStyle={navBarStyle}
+    //     titleStyle={navBarTitleStyle}
+    //     leftButtonIconStyle={{  tintColor: '#FFF' }}
+    //   >
+    //     <Scene key="search" component={Search} title={title} />
+    //     <Scene key="add" component={Add} title={title} initial />
+    //   </Router>
+    // </View>);
 
     return (
       <View style={{ flex: 1 }}>

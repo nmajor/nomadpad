@@ -18,6 +18,7 @@ class Search extends Component {
   }
   handleSubmitPress() {
     const { query } = this.props.form;
+    this.refs.search.blur();
 
     this.props.queryResidences(query, () => {
       Actions.viewResidence({ type: ActionConst.RESET });
@@ -50,6 +51,7 @@ class Search extends Component {
         <CardSection>
           <View style={containerStyle}>
             <TextInput
+              ref="search"
               autoCorrect
               style={inputStyle}
               placeholder="Enter a City"

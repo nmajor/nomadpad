@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import SearchForm from './SearchForm';
 import PageContainer from './PageContainer';
 import _ from 'lodash';
@@ -46,9 +46,9 @@ class Search extends Component {
       <View style={{ height: 150, justifyContent: 'center' }}>
         <SearchForm />
       </View>
-      <View style={{ flex: 1, justifyContent: 'flex-start' }}>
+      <ScrollView style={{ flex: 1 }}>
         {this.renderResultsList()}
-      </View>
+      </ScrollView>
     </View>);
   }
   render() {

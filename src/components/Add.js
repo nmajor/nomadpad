@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import PageContainer from './PageContainer';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import { createResidence, setResidenceFormValue, clearResidenceForm } from '../actions';
@@ -19,6 +19,9 @@ class Add extends Component {
   onContactChange(text) {
     this.props.setResidenceFormValue('contact', text);
   }
+  onWifiBadPress() { this.props.setResidenceFormValue('wifi', 0); }
+  onWifiFairPress() { this.props.setResidenceFormValue('wifi', 1); }
+  onWifiGoodPress() { this.props.setResidenceFormValue('wifi', 2); }
   handleSubmitPress() {
     const {
       city,
@@ -45,6 +48,18 @@ class Add extends Component {
       </Button>
     );
   }
+  renderWifiOptions() {
+    return (
+      <View>
+        <View><Text>Wifi</Text></View>
+        <View style={{ flexDirection: 'row', flex: 1, justifyContent: 'space-around' }}>
+          <TouchableOpacity style={{ flex: 1 }} onPress={this.onWifiBadPress.bind(this)}><Text>Bad</Text></TouchableOpacity>
+          <TouchableOpacity style={{ flex: 1 }} onPress={this.onWifiFairPress.bind(this)}><Text>Fair</Text></TouchableOpacity>
+          <TouchableOpacity style={{ flex: 1 }} onPress={this.onWifiGoodPress.bind(this)}><Text>Good</Text></TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
   render() {
     const { form } = this.props;
 
@@ -66,7 +81,7 @@ class Add extends Component {
                 onChangeText={this.onAddressChange.bind(this)}
               />
             </CardSection>
-            <CardSection border>
+            <CardSection>
               <Input
                 label="Contact"
                 value={form.contact}
