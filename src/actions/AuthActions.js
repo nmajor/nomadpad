@@ -1,32 +1,37 @@
 // import { AccessToken, LoginManager } from 'react-native-fbsdk';
-import firebase from 'react-native-firebase';
+import firebase from '../firebase';
 
 import { setUser } from './UserActions';
 import { setLoginFormValue } from './LoginFormActions';
 
-export const loginUser = (email, password) => {
-  // cb = cb || function(){}; // eslint-disable-line
+export const loginUser = (email, password, cb) => {
+  cb = cb || function(){}; // eslint-disable-line
 
   return (dispatch) => {
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((user) => {
       console.log('user logged in', user);
-      dispatch(setUser(user));
+      loginUserSuccess(dispatch, user, cb);
     })
     .catch((err) => {
+      console.error('login error', err);
+
       firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((user) => {
         console.log('user created', user);
-        dispatch(setUser(user));
+        loginUserSuccess(dispatch, user, cb);
       })
       .catch((error) => {
         dispatch(setLoginFormValue('errors', 'An error happened.'));
         console.error('register error', error);
       });
-
-      console.error('login error', err);
     });
   };
+};
+
+const loginUserSuccess = (dispatch, user, cb) => {
+  dispatch(setUser(user));
+  cb();
 };
 
 // firebase.auth().signInWithEmailAndPassword(email, password)

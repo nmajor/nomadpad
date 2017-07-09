@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, Image } from 'react-native';
-// import { Actions, ActionConst } from 'react-native-router-flux';
+import { Actions, ActionConst } from 'react-native-router-flux';
 import { primaryColor } from '../styleVars';
-import { loginUserFacebook, setLoginFormValue } from '../actions';
+import { loginUser, setLoginFormValue, clearLoginForm } from '../actions';
 import { Input, Button, Spinner, Card, CardSection } from './common';
 
 const saladImage = require('../assets/map-desk.jpg');
@@ -15,9 +15,14 @@ class Login extends Component {
   onPasswordChange(text) {
     this.props.setLoginFormValue('password', text);
   }
+  ComponentDidUnmount() {
+    this.props.clearLoginForm();
+  }
   handleSubmitPress() {
     const { email, password } = this.props.form;
-    this.props.loginUser(email, password);
+    this.props.loginUser(email, password, () => {
+      Actions.search({ type: ActionConst.RESET });
+    });
   }
   renderButton() {
     if (this.props.loading) {
@@ -148,4 +153,4 @@ const mapStateToProps = ({ loginForm }) => {
   };
 };
 
-export default connect(mapStateToProps, { loginUserFacebook, setLoginFormValue })(Login);
+export default connect(mapStateToProps, { loginUser, setLoginFormValue, clearLoginForm })(Login);

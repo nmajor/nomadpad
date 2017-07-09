@@ -3,4 +3,6 @@ export default {
     welcome: 0,
   },
   loginForm: {},
+  profileForm: {},
+  user: {},
 };
