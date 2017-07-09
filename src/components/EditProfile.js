@@ -40,7 +40,7 @@ class EditProfile extends Component {
     );
   }
   render() {
-    const { form } = this.props;
+    const { form, user } = this.props;
 
     return (
       <PageContainer sceneKey={this.props.sceneKey}>
@@ -50,9 +50,8 @@ class EditProfile extends Component {
           <Card>
             <CardSection border>
               <Input
-                label="Email"
-                placeholder="password"
-                value={form.email}
+                label="Name"
+                value={form.email || user.displayName}
                 onChangeText={this.onDisplayNameChange.bind(this)}
               />
             </CardSection>
@@ -66,10 +65,10 @@ class EditProfile extends Component {
   }
 }
 
-const mapStateToProps = ({ profileForm }) => {
-  console.log('blah profileForm', profileForm);
+const mapStateToProps = ({ profileForm, user }) => {
   return {
     form: profileForm,
+    user,
   };
 };
 
