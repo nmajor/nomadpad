@@ -4,25 +4,27 @@ import FooterIcon from './FooterIcon';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
 class Footer extends Component {
+  renderFooterIcon() {
+    if (this.props.sceneKey === 'add') {
+      return (<FooterIcon
+        fontSize="20"
+        text="Search"
+        onPress={() => { Actions.search({ type: ActionConst.RESET }); }}
+        active={this.props.sceneKey === 'add'}
+      />);
+    }
+
+    return (<FooterIcon
+      text="+"
+      onPress={() => { Actions.add({ type: ActionConst.RESET }); }}
+      active={this.props.sceneKey === 'add'}
+    />);
+  }
   render() {
     const { footerStyle } = styles;
     return (
       <View style={footerStyle}>
-        <FooterIcon
-          text="Search"
-          onPress={() => { Actions.search({ type: ActionConst.RESET }); }}
-          active={this.props.sceneKey === 'search'}
-        />
-        <FooterIcon
-          text="Add"
-          onPress={() => { Actions.add({ type: ActionConst.RESET }); }}
-          active={this.props.sceneKey === 'add'}
-        />
-        <FooterIcon
-          text="Profile"
-          onPress={() => { Actions.profile({ type: ActionConst.RESET }); }}
-          active={this.props.sceneKey === 'profile'}
-        />
+        {this.renderFooterIcon()}
       </View>
     );
   }

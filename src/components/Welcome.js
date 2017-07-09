@@ -4,6 +4,7 @@ import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { Actions, ActionConst } from 'react-native-router-flux';
 import { primaryColor } from '../styleVars';
 import { setPageViewed } from '../actions';
+import _ from 'lodash';
 
 const saladImage = require('../assets/map-desk.jpg');
 
@@ -112,7 +113,9 @@ const styles = {
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    needsLogin: _.isEmpty(state.user),
+  };
 };
 
 export default connect(mapStateToProps, { setPageViewed })(Welcome);

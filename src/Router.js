@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, StatusBar } from 'react-native';
 import { Scene, Router } from 'react-native-router-flux';
-// import Welcome from './components/Welcome';
+import Welcome from './components/Welcome';
 import Search from './components/Search';
 import Add from './components/Add';
 import Profile from './components/Profile';
@@ -27,6 +27,20 @@ class RouterComponent extends Component {
     } = styles;
 
     const title = appConfig.displayName;
+    return (<View style={{ flex: 1 }}>
+      <StatusBar
+        barStyle="light-content"
+      />
+      <Router
+        sceneStyle={{ paddingTop: 64 }}
+        navigationBarStyle={navBarStyle}
+        titleStyle={navBarTitleStyle}
+        leftButtonIconStyle={{ tintColor: '#FFF' }}
+      >
+        <Scene key="search" component={Search} title={title} initial={this.isInitial('search')} />
+        <Scene key="add" component={Add} title={title} />
+      </Router>
+    </View>);
 
     return (
       <View style={{ flex: 1 }}>
@@ -39,10 +53,10 @@ class RouterComponent extends Component {
           titleStyle={navBarTitleStyle}
           leftButtonIconStyle={{ tintColor: '#FFF' }}
         >
-          <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={EditProfile} hideNavBar initial={this.isInitial('welcome')} />
+          <Scene key="welcome" sceneStyle={{ paddingTop: 0 }} component={Welcome} hideNavBar initial={this.isInitial('welcome')} />
           <Scene key="register" sceneStyle={{ paddingTop: 0 }} component={Register} hideNavBar initial={this.isInitial('register')} />
           <Scene key="login" sceneStyle={{ paddingTop: 0 }} component={Login} hideNavBar initial={this.isInitial('login')} />
-          <Scene key="search" component={Search} title={title} initial={this.isInitial('home')} />
+          <Scene key="search" component={Search} title={title} initial={this.isInitial('search')} />
           <Scene key="add" component={Add} title={title} />
           <Scene key="profile" component={Profile} title={title} />
           <Scene key="editProfile" component={EditProfile} title={title} />
@@ -67,7 +81,7 @@ const styles = {
 };
 
 const mapStateToProps = ({ pagesViewed, user }) => {
-  let initialScene = 'search';
+  let initialScene = 'add';
 
   if (!pagesViewed.welcome) {
     initialScene = 'welcome';

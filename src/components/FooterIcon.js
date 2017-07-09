@@ -1,13 +1,13 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { textColorLight, primaryColor } from '../styleVars';
+import { primaryColor } from '../styleVars';
 
 const FooterIcon = (props) => {
   const { viewStyle } = styles;
   let { textStyle } = styles;
 
-  if (props.active) {
-    textStyle = { ...textStyle, color: primaryColor };
+  if (props.fontSize) {
+    textStyle = { ...textStyle, fontSize: parseInt(props.fontSize, 10) };
   }
 
   return (
@@ -22,8 +22,9 @@ const styles = {
     justifyContent: 'space-around',
   },
   textStyle: {
-    fontSize: 12,
-    color: textColorLight,
+    fontSize: 40,
+    lineHeight: 40,
+    color: primaryColor,
   },
 };
 

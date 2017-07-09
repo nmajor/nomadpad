@@ -1,5 +1,5 @@
 // import { AccessToken, LoginManager } from 'react-native-fbsdk';
-import firebase from '../firebase';
+import firebase from 'firebase';
 
 import { setUser } from './UserActions';
 import { setLoginFormValue } from './LoginFormActions';
